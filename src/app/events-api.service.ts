@@ -6,9 +6,9 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EventsApiService {
   url = "https://app.ticketmaster.com/discovery/v2/events.json";
-  apiKey = "25sxtwfASukPLAly0SJ36i7UeNqwIWfR";
+  apiKey = "ADD YOUR API KEY HERE";
   events: any[] = [];
-  
+
   constructor(private http: HttpClient) {}
 
   getEvents() {

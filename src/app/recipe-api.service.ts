@@ -5,8 +5,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class RecipeApiService {
-  apiKey = "3bb1e9626332210007db9b415f72b702";
-  appId = "7a3e7654";
+  apiKey = "ADD YOUR API KEY HERE";
+  appId = "ADD YOUR APP KEY HERE";
   url = "https://api.edamam.com/search";
   recipes: any[];
   constructor(private http: HttpClient) {}
