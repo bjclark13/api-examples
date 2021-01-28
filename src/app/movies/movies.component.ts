@@ -21,6 +21,10 @@ export class MoviesComponent implements OnInit {
     console.log(this.movieService.favorites);
   }
 
+  unFavorite(movie: Movie) {
+
+  }
+
   ngOnInit() {
     this.movieService.getMovies();
   }

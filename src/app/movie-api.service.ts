@@ -27,7 +27,7 @@ interface Movie {
   providedIn: "root",
 })
 export class MovieApiService {
-  apiKey = "ADD YOUR API KEY HERE";
+  apiKey = "4e66c947aedb9486a2094909c53879c7";
   url = "https://api.themoviedb.org/3/discover/movie";
   movies: Movie[] = [];
   favorites: Movie[] = [
