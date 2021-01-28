@@ -1,0 +1,5 @@
+<h2>Favorites</h2>
+<div *ngFor="let favorite of movieService.favorites; let i = index;">
+    {{favorite.title}}
+    <button (click)="removeFavorite(i)"> Remove </button>
+</div>

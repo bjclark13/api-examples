@@ -1,8 +1,14 @@
-<h2>Movies:</h2>
-<app-movies></app-movies>
+<nav>
+    <ul>
+        <li><a [routerLink]="['/movies']">Movies</a></li>
+        <li><a [routerLink]="['/favorites']">Favorites</a></li>
+    </ul>
+   
+</nav>
+<router-outlet></router-outlet>
 
-<h2>Recipes:</h2>
+<!-- <h2>Recipes:</h2>
 <app-recipes></app-recipes>
 
 <h2>Events:</h2>
-<app-events></app-events>
+<app-events></app-events> -->

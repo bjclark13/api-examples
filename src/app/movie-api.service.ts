@@ -7,20 +7,20 @@ interface Response {
 }
 
 interface Movie {
-  poster_path: string;
-  adult: boolean;
-  overview: string;
-  release_date: string;
-  genre_ids: number[];
-  id: number;
-  original_title: string;
-  original_language: string;
+  poster_path?: string;
+  adult?: boolean;
+  overview?: string;
+  release_date?: string;
+  genre_ids?: number[];
+  id?: number;
+  original_title?: string;
+  original_language?: string;
   title: string;
-  backdrop_path: string;
-  popularity: number;
-  vote_count: number;
-  video: boolean;
-  vote_average: number;
+  backdrop_path?: string;
+  popularity?: number;
+  vote_count?: number;
+  video?: boolean;
+  vote_average?: number;
 }
 
 @Injectable({
@@ -29,7 +29,13 @@ interface Movie {
 export class MovieApiService {
   apiKey = "ADD YOUR API KEY HERE";
   url = "https://api.themoviedb.org/3/discover/movie";
-  movies: Movie[];
+  movies: Movie[] = [];
+  favorites: Movie[] = [
+    {
+      title: "My Movie",
+    },
+  ];
+
   constructor(private http: HttpClient) {}
 
   getMovies() {
@@ -39,7 +45,7 @@ export class MovieApiService {
     this.http.get(requestUrl).subscribe(
       (response: Response) => {
         console.log(response.results);
-        this.movies = response.results;
+        this.movies = response.results.slice(0, 3); // only first 3
       },
       (error) => {
         console.error(error);
